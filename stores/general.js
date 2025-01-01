@@ -64,7 +64,6 @@ export const useGeneralStore = defineStore('general', {
 
     async getRandomUsers(type) {
       let res = await $axios.get(`/api/get-random-users`)
-
       if (type === 'suggested') {
         this.suggested = res.data.suggested
       }

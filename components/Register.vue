@@ -62,7 +62,6 @@ let errors = ref(null)
 
 const register = async () => {
     errors.value = null
-
     try {
         await $userStore.getTokens()
         await $userStore.register(
