@@ -51,8 +51,10 @@
                 <video 
                     v-if="$generalStore.selectedPost.video"
                     ref="video"
-                    loop
+                    autoplay
                     muted
+                    loop
+                    controls
                     class="h-screen mx-auto" 
                     :src="$generalStore.selectedPost.video"
                 />

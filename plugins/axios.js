@@ -1,13 +1,12 @@
-import axios from "axios"
+import axios from "axios";
 
 export default defineNuxtPlugin((NuxtApp) => {
+  axios.defaults.withCredentials = true;
+  axios.defaults.baseURL = "https://tiktok-clone-api-sigma.vercel.app";
 
-    axios.defaults.withCredentials = true;
-    axios.defaults.baseURL = 'http://localhost:8000'
-
-    return {
-        provide: { 
-            axios: axios
-        },
-    }
-})
+  return {
+    provide: {
+      axios: axios,
+    },
+  };
+});
